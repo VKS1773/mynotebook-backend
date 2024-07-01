@@ -38,6 +38,7 @@ router.post(
 
       //create user
       user = await User.create({
+        //return promises so that's why awiat
         name: req.body.name,
         email: req.body.email,
         password: secPassword,

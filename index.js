@@ -14,6 +14,11 @@ app.use("/api/notes", require("./routes/notes"));
 // app.listen(port, () => {
 //   console.log(`Mynotebook backend app listening on port ${process.env.URL}`);
 // });
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 const hostname = "0.0.0.0";
 const port = 5000;
 

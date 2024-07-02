@@ -6,12 +6,8 @@ const app = express();
 var cors = require("cors");
 // const port = process.env.PORT;
 
-// app.use(cors());
-var corsOptions = {
-  origin: "http://localhost:3000",
-};
+app.use(cors());
 
-app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
